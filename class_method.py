@@ -31,6 +31,7 @@ User.number_of_users()
 user1.number_of_users()
 
 
+#  다양한 형태로 정보가 들어올 경우 classmethod 사용 방법
 class Client:
     def __init__(self, name, email, password):
         self.name = name
@@ -39,7 +40,6 @@ class Client:
 
     @classmethod
     def from_string(cls, string_params):
-        # 코드를 쓰세요
         parameter_list = string_params.split(',')
 
         name = parameter_list[0]
@@ -50,7 +50,6 @@ class Client:
 
     @classmethod
     def from_list(cls, list_params):
-        # 코드를 쓰세요
         name = list_params[0]
         email = list_params[1]
         password = list_params[2]
@@ -59,7 +58,7 @@ class Client:
 
 
 # 유저 생성 및 초기값 설정
-jake = Client.from_string("jake, jake@gmail.com,,123456")
+jake = Client.from_string("jake, jake@gmail.com, 123456")
 mike = Client.from_list(["mike", "mike@gmail.com", "abcdef"])
 
 print(jake.name, jake.email, jake.password)
