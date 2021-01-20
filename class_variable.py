@@ -16,7 +16,5 @@ user2 = User("Amy", "amy@gmail.com", "23412")
 user3 = User("Tom", "tom@gmail.com", "41243")
 user4 = User("Mike", "mike@gmail.com", "15243")
 
-user1.count = 5
-
 print(User.count)
 print(user1.count)
